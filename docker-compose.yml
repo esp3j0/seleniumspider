@@ -1,0 +1,275 @@
+# To execute this docker-compose yml file use `docker-compose -f docker-compose-v3.yml up`
+# Add the `-d` flag at the end for detached execution
+# To stop the execution, hit Ctrl+C, and then `docker-compose -f docker-compose-v3.yml down`
+version: "3"
+services:
+ 
+  firefox1:
+    image: selenium/node-firefox:latest
+    shm_size: 300m
+    volumes:
+      - /home/esp3j0/rep/seleniumspider/csvs:/home/seluser/csvs
+    depends_on:
+      - selenium-hub
+    environment:
+      - SE_EVENT_BUS_HOST=selen-hub
+      - SE_EVENT_BUS_PUBLISH_PORT=4442
+      - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
+    networks:
+      - my-grid
+    ports:
+      - "5901:5900"
+      - "7901:7900"
+  firefox2:
+    image: selenium/node-firefox:latest
+    shm_size: 300m
+    volumes:
+      - /home/esp3j0/rep/seleniumspider/csvs:/home/seluser/csvs
+    depends_on:
+      - selenium-hub
+    environment:
+      - SE_EVENT_BUS_HOST=selen-hub
+      - SE_EVENT_BUS_PUBLISH_PORT=4442
+      - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
+    networks:
+      - my-grid
+    ports:
+      - "5902:5900"
+      - "7902:7900"
+  firefox3:
+    image: selenium/node-firefox:latest
+    shm_size: 300m
+    volumes:
+      - /home/esp3j0/rep/seleniumspider/csvs:/home/seluser/csvs
+    depends_on:
+      - selenium-hub
+    environment:
+      - SE_EVENT_BUS_HOST=selen-hub
+      - SE_EVENT_BUS_PUBLISH_PORT=4442
+      - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
+    networks:
+      - my-grid
+    ports:
+      - "5903:5900"
+      - "7903:7900"
+  firefox4:
+    image: selenium/node-firefox:latest
+    shm_size: 300m
+    volumes:
+      - /home/esp3j0/rep/seleniumspider/csvs:/home/seluser/csvs
+    depends_on:
+      - selenium-hub
+    environment:
+      - SE_EVENT_BUS_HOST=selen-hub
+      - SE_EVENT_BUS_PUBLISH_PORT=4442
+      - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
+    networks:
+      - my-grid
+    ports:
+      - "5904:5900"
+      - "7904:7900"
+  firefox5:
+    image: selenium/node-firefox:latest
+    shm_size: 300m
+    volumes:
+      - /home/esp3j0/rep/seleniumspider/csvs:/home/seluser/csvs
+    depends_on:
+      - selenium-hub
+    environment:
+      - SE_EVENT_BUS_HOST=selen-hub
+      - SE_EVENT_BUS_PUBLISH_PORT=4442
+      - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
+    networks:
+      - my-grid
+    ports:
+      - "5905:5900"
+      - "7905:7900"
+  firefox6:
+    image: selenium/node-firefox:latest
+    shm_size: 300m
+    volumes:
+      - /home/esp3j0/rep/seleniumspider/csvs:/home/seluser/csvs
+    depends_on:
+      - selenium-hub
+    environment:
+      - SE_EVENT_BUS_HOST=selen-hub
+      - SE_EVENT_BUS_PUBLISH_PORT=4442
+      - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
+    networks:
+      - my-grid
+    ports:
+      - "5906:5900"
+      - "7906:7900"
+  firefox7:
+    image: selenium/node-firefox:latest
+    shm_size: 300m
+    volumes:
+      - /home/esp3j0/rep/seleniumspider/csvs:/home/seluser/csvs
+    depends_on:
+      - selenium-hub
+    environment:
+      - SE_EVENT_BUS_HOST=selen-hub
+      - SE_EVENT_BUS_PUBLISH_PORT=4442
+      - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
+    networks:
+      - my-grid
+    ports:
+      - "5907:5900"
+      - "7907:7900"
+  firefox8:
+    image: selenium/node-firefox:latest
+    shm_size: 300m
+    volumes:
+      - /home/esp3j0/rep/seleniumspider/csvs:/home/seluser/csvs
+    depends_on:
+      - selenium-hub
+    environment:
+      - SE_EVENT_BUS_HOST=selen-hub
+      - SE_EVENT_BUS_PUBLISH_PORT=4442
+      - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
+    networks:
+      - my-grid
+    ports:
+      - "5908:5900"
+      - "7908:7900"
+  firefox9:
+    image: selenium/node-firefox:latest
+    shm_size: 300m
+    volumes:
+      - /home/esp3j0/rep/seleniumspider/csvs:/home/seluser/csvs
+    depends_on:
+      - selenium-hub
+    environment:
+      - SE_EVENT_BUS_HOST=selen-hub
+      - SE_EVENT_BUS_PUBLISH_PORT=4442
+      - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
+    networks:
+      - my-grid
+    ports:
+      - "5909:5900"
+      - "7909:7900"
+  firefox10:
+    image: selenium/node-firefox:latest
+    shm_size: 300m
+    volumes:
+      - /home/esp3j0/rep/seleniumspider/csvs:/home/seluser/csvs
+    depends_on:
+      - selenium-hub
+    environment:
+      - SE_EVENT_BUS_HOST=selen-hub
+      - SE_EVENT_BUS_PUBLISH_PORT=4442
+      - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
+    networks:
+      - my-grid
+    ports:
+      - "5910:5900"
+      - "7910:7900"
+  firefox11:
+    image: selenium/node-firefox:latest
+    shm_size: 300m
+    volumes:
+      - /home/esp3j0/rep/seleniumspider/csvs:/home/seluser/csvs
+    depends_on:
+      - selenium-hub
+    environment:
+      - SE_EVENT_BUS_HOST=selen-hub
+      - SE_EVENT_BUS_PUBLISH_PORT=4442
+      - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
+    networks:
+      - my-grid
+    ports:
+      - "5911:5900"
+      - "7911:7900"
+  firefox12:
+    image: selenium/node-firefox:latest
+    shm_size: 300m
+    volumes:
+      - /home/esp3j0/rep/seleniumspider/csvs:/home/seluser/csvs
+    depends_on:
+      - selenium-hub
+    environment:
+      - SE_EVENT_BUS_HOST=selen-hub
+      - SE_EVENT_BUS_PUBLISH_PORT=4442
+      - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
+    networks:
+      - my-grid
+    ports:
+      - "5912:5900"
+      - "7912:7900"
+  firefox13:
+    image: selenium/node-firefox:latest
+    shm_size: 300m
+    volumes:
+      - /home/esp3j0/rep/seleniumspider/csvs:/home/seluser/csvs
+    depends_on:
+      - selenium-hub
+    environment:
+      - SE_EVENT_BUS_HOST=selen-hub
+      - SE_EVENT_BUS_PUBLISH_PORT=4442
+      - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
+    networks:
+      - my-grid
+    ports:
+      - "5913:5900"
+      - "7913:7900"
+  firefox14:
+    image: selenium/node-firefox:latest
+    shm_size: 300m
+    volumes:
+      - /home/esp3j0/rep/seleniumspider/csvs:/home/seluser/csvs
+    depends_on:
+      - selenium-hub
+    environment:
+      - SE_EVENT_BUS_HOST=selen-hub
+      - SE_EVENT_BUS_PUBLISH_PORT=4442
+      - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
+    networks:
+      - my-grid
+    ports:
+      - "5914:5900"
+      - "7914:7900"
+  firefox15:
+    image: selenium/node-firefox:latest
+    shm_size: 300m
+    volumes:
+      - /home/esp3j0/rep/seleniumspider/csvs:/home/seluser/csvs
+    depends_on:
+      - selenium-hub
+    environment:
+      - SE_EVENT_BUS_HOST=selen-hub
+      - SE_EVENT_BUS_PUBLISH_PORT=4442
+      - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
+    networks:
+      - my-grid
+    ports:
+      - "5915:5900"
+      - "7915:7900"
+  firefox16:
+    image: selenium/node-firefox:latest
+    shm_size: 300m
+    volumes:
+      - /home/esp3j0/rep/seleniumspider/csvs:/home/seluser/csvs
+    depends_on:
+      - selenium-hub
+    environment:
+      - SE_EVENT_BUS_HOST=selen-hub
+      - SE_EVENT_BUS_PUBLISH_PORT=4442
+      - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
+    networks:
+      - my-grid
+    ports:
+      - "5916:5900"
+      - "7916:7900"
+    
+  selenium-hub:
+    image: selenium/hub:latest
+    container_name: selen-hub
+    ports:
+      - "4442:4442"
+      - "4443:4443"
+      - "4444:4444"
+    networks:
+      - my-grid
+
+networks:
+  my-grid:
