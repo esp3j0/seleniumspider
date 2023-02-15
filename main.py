@@ -89,6 +89,8 @@ class Contact_maps_proteintoolsweb:
         while(True):
             timeout += 1
             if timeout > mx_timeout:
+                system("echo "+name.replace(".pdb","")+">> failednamelist.txt")
+                system("rm -rf ./csvs/{}".format(name.replace(".pdb","")))
                 return False
             presize = path.getsize("./csvs/{}/contact_maps_table.csv".format(name.replace(".pdb","")))
             sleep(15)
